@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(34, 34, 34);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: rgb(18, 77, 187);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    color: aliceblue;
+    font-size: 40px;
+    margin: 0;
+}
+nav {
+    background-color: rgb(34, 34, 107);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 15px;
+}
+.event {
+    background-color: rgba(26, 26, 26, 0.781);
+    margin: 20px auto;
+    width: 80%;
+    height:200px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.event h1 {
+    color: aliceblue;
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+.event p {
+    font-size: 18px;
+    color: aliceblue;
+    margin: 0;
+}
+.event img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+footer {
+    background-color: rgb(18, 77, 187);
+    color: aliceblue;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+.apps{
+    background-color: rgba(26, 26, 26, 0.781);
+    margin: 20px auto;
+    width: 80%;
+    height:200px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.apps img{
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.apps h1{
+    color: aliceblue;
+    font-size: 25px;
+    margin: 0 0 10px;
+    position: absolute;
+    top:20px;
+    left: 180px;
+}
+.apps p{
+    font-size: 18px;
+    color: aliceblue;
+    margin: 0px;
+    position:relative;
+    bottom: 100px;
+    left: 160px;
+}
