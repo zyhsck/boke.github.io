@@ -3,88 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Blog/Forum</title>
+    <title>My Blog</title>
     <style>
-        /* Reset some default styles */
-        body, h1, h2, p {
+        body {
+            background-color: rgb(34, 34, 34);
             margin: 0;
             padding: 0;
-        }
-
-        body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
         }
-
         header {
-            background-color: #3498db;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
+            background-color: rgb(18, 77, 187);
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
+        header h1 {
+            color: aliceblue;
+            font-size: 40px;
+            margin: 0;
+        }
         nav {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
+            background-color: rgb(34, 34, 107);
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
         nav a {
-            color: #fff;
+            color: antiquewhite;
             text-decoration: none;
-            padding: 0.5em 1em;
-            margin: 0 1em;
+            font-size: 20px;
+            margin: 0 15px;
         }
-
-        main {
-            padding: 2em;
+        .event {
+            background-color: rgba(26, 26, 26, 0.781);
+            margin: 20px auto;
+            width: 80%;
+            height:200px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
         }
-
+        .event h1 {
+            color: aliceblue;
+            font-size: 25px;
+            margin: 0 0 10px;
+        }
+        .event p {
+            font-size: 18px;
+            color: aliceblue;
+            margin: 0;
+        }
+        .event img {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
         footer {
-            background-color: #2c3e50;
-            color: #fff;
+            background-color: rgb(18, 77, 187);
+            color: aliceblue;
             text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
+            padding: 10px 0;
             width: 100%;
+            position: fixed;
+            bottom: 0px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Blog/Forum</h1>
+        <h1>Blog</h1>
     </header>
-
     <nav>
-        <a href="#home">Home</a>
-        <a href="#blog">Blog</a>
-        <a href="#forum">Forum</a>
-        <!-- Add more navigation links as needed -->
+        <a href="#home">个人主页</a>
+        <a href="#blog">资源</a>
+        <a href="#forum">其它</a>
     </nav>
-
-    <main>
-        <!-- Content goes here -->
-        <section id="home">
-            <h2>Welcome to Your Blog/Forum</h2>
-            <p>This is the home section where you can introduce your site.</p>
-        </section>
-
-        <section id="blog">
-            <h2>Latest Blog Posts</h2>
-            <!-- Display your blog posts here -->
-        </section>
-
-        <section id="forum">
-            <h2>Forum</h2>
-            <!-- Your forum content goes here -->
-        </section>
-    </main>
-
+    <div class="event">
+        <img src="https://p.qqan.com/up/2021-7/16276981475843839.jpg">
+        <h1>2024/2/5建站</h1>
+        <p>建站啦！！</p>
+        
+    </div>
     <footer>
-        <p>&copy; 2024 Your Blog/Forum. All rights reserved.</p>
+        <p>&copy; 2024 My Blog/Forum.</p>
     </footer>
 </body>
 </html>
