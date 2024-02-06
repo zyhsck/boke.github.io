@@ -83,7 +83,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: relative;
+    position: initial;
     bottom: 0px;
 }
 .apps{
