@@ -4,26 +4,35 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
-header {
+.title header {
     background-color: rgb(18, 77, 187);
     height: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    width:100%;
+    
 }
-header h1 {
+.title header img {
+    height: 50px;
+    width:  50px;
+    position: relative;
+    left: 5%;
+}
+.title header h1 {
     color: aliceblue;
-    font-size: 40px;
+    font-size: 45px;
     margin: 0;
+    position: absolute;
+    left: 45%;
 }
-nav {
+.title nav {
     background-color: rgb(34, 34, 107);
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-nav a {
+.title nav a {
     color: antiquewhite;
     text-decoration: none;
     font-size: 20px;
@@ -32,7 +41,7 @@ nav a {
 .event {
     background-color: rgba(26, 26, 26, 0.781);
     margin: 20px auto;
-    width: 80%;
+    width: 85%;
     height:200px;
     padding: 20px;
     box-sizing: border-box;
@@ -55,19 +64,31 @@ nav a {
     top: 20px;
     right: 20px;
 }
+.event button {
+    background-color: rgb(0, 119, 255);
+    width: 80px;
+    height: 35px;
+    text-align:center;
+    font-size: 18px;
+    color: azure;
+    border :none ;
+    position: absolute;
+    top: 130px;
+    right: 30px;
+}
 footer {
     background-color: rgb(18, 77, 187);
     color: aliceblue;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0px;
 }
 .apps{
     background-color: rgba(26, 26, 26, 0.781);
     margin: 20px auto;
-    width: 80%;
+    width: 85%;
     height:200px;
     padding: 20px;
     box-sizing: border-box;
