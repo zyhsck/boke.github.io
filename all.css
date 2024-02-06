@@ -23,7 +23,8 @@ body {
     font-size: 45px;
     margin: 0;
     position: absolute;
-    left: 45%;
+    left: 50%; /* Set x-coordinate to center of the webpage */
+    transform: translateX(-50%); /* Adjust for half of the element's width */
 }
 .title nav {
     background-color: rgb(34, 34, 107);
