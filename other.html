@@ -6,8 +6,9 @@
     <title>My Blog</title>
     <link rel="stylesheet" type="text/css" href="all.css">
 </head>
+
 <body>
-    <div class="title" >   
+    <div class="title">
         <header>
             <img src="png/logo.png">
             <h1>Blog</h1>
@@ -16,16 +17,21 @@
             <a href="index.html">主页</a>
             <a href="assets.html">资源</a>
             <a href="/other.html">其它</a>
+            <a href="about.html">关于</a>
         </nav>
     </div>
+
     <div class="apps">
     
         <h1>clash高速节点</h1>
+        <br>
         <img src="https://image.downbank.cn/2021/0401/20210401110626609.png">
-        <p>https://node.oneclash.cc/2024/02/20240204.yaml</p>
-        <p>https://node.oneclash.cc/2024/02/20240202.yaml</p>
-        
+        <br>
+        <a  id="clash-url1" ></a><br>
+        <a  id="clash-url2" ></a>
+     
     </div>
+
     <br>
     <br>
     <br>
@@ -33,5 +39,47 @@
     <footer>
         <p>&copy; 2024 My Blog/Forum.</p>
     </footer>
+
+    <script>
+        // 在文档加载完成后执行JavaScript代码
+        document.addEventListener("DOMContentLoaded", function() {
+            // 获取当前日期
+            var today = new Date();
+
+            // 获取年份
+            var year = today.getFullYear();
+
+            // 获取月份（注意：月份从0开始，所以要加1）
+            var month = today.getMonth() + 1;
+            if(month.toString ().length == 1){
+                month = "0"+month
+
+            }
+            
+            // 获取日期
+            var day = today.getDate();
+            if(day.toString ().length == 1){
+                day = "0"+day
+
+            }
+            // 输出结果
+            console.log("当前日期：" + year + "年" + month + "月" + day + "日");
+
+            // 获取元素
+            var clash_u1 = document.getElementById("clash-url1");
+            var clash_u2 = document.getElementById("clash-url2");
+
+            /*设置元素值
+            for (let times = 0; times < 5; times++) {
+                console.log(times);
+            }
+            */
+            clash_u1.href = "https://www.freeclashnode.com/uploads/"+year+"/"+month+"/1-"+year+month+day+".yaml"
+            clash_u2.href = "https://www.freeclashnode.com/uploads/"+year+"/"+month+"/0-"+year+month+day+".yaml"
+            clash_u1.innerHTML = "https://www.freeclashnode.com/uploads/"+year+"/"+month+"/1-"+year+month+day+".yaml"
+            clash_u2.innerHTML = "https://www.freeclashnode.com/uploads/"+year+"/"+month+"/0-"+year+month+day+".yaml"
+
+        });
+    </script>
 </body>
 </html>
