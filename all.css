@@ -3,8 +3,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    
 }
 
+.title {
+    position: fixed;
+    top:0px;
+    width: 100%;
+    z-index: 9999;
+}
 .title header {
     background-color: rgb(18, 77, 187);
     height: 100px;
@@ -48,6 +55,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    top:150px;
+    
 }
 .event h1 {
     color: aliceblue;
@@ -58,6 +67,7 @@ body {
     font-size: 18px;
     color: aliceblue;
     margin: 0;
+    width: 85%;
 }
 .event img {
     height: 100px;
@@ -78,15 +88,6 @@ body {
     bottom: 10px;
     right: 30px;
 }
-footer {
-    background-color: rgb(18, 77, 187);
-    color: aliceblue;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-}
 .apps{
     background-color: rgba(26, 26, 26, 0.781);
     margin: 20px auto;
@@ -95,6 +96,7 @@ footer {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    top:150px;
 }
 .apps img{
     width: 130px;
@@ -126,6 +128,7 @@ footer {
     position:relative;
     bottom: 100px;
     left: 160px;
+    
 }
 .apps button {
     background-color: rgb(0, 110, 255);
@@ -145,4 +148,16 @@ footer {
     text-decoration: none;
     font-size: 20px;
 
+}
+
+
+
+.tm {
+    background-color: rgb(18, 77, 187);
+    color: aliceblue;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
 }
