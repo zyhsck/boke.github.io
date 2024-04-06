@@ -91,12 +91,13 @@ body {
 .apps{
     background-color: rgba(26, 26, 26, 0.781);
     margin: 20px auto;
-    width: 85%;
+    width: 90%;
     height:200px;
-    padding: 20px;
     box-sizing: border-box;
     position: relative;
     top:150px;
+    display: block;
+    
 }
 .apps img{
     width: 130px;
@@ -106,7 +107,7 @@ body {
     left: 10px;
 }
 .apps h1{
-    color: aliceblue;
+    color: rgb(230, 230, 230);
     font-size: 25px;
     margin: 0 0 10px;
     position: absolute;
@@ -115,21 +116,22 @@ body {
 }
 .apps p{
     font-size: 18px;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     margin: 0px;
     position:relative;
-    bottom: 100px;
-    left: 160px;
+    bottom: 80px;
+    left: 180px;
 }
-.apps a{
+.apps a {
     font-size: 18px;
     color: rgb(81, 171, 250);
     margin: 0px;
-    position:relative;
-    bottom: 100px;
-    left: 160px;
+    position: relative;
+    bottom: 80px;
+    left: 180px;
     
 }
+
 .apps button {
     background-color: rgb(0, 110, 255);
     width: 90px;
