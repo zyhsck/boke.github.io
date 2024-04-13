@@ -87,6 +87,10 @@ body {
     position: absolute;
     bottom: 10px;
     right: 30px;
+}.event button a {
+
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 .apps{
     background-color: rgba(26, 26, 26, 0.781);
@@ -152,6 +156,51 @@ body {
 
 }
 
+
+.push {
+    background-color: rgba(26, 26, 26, 0.781);
+    margin: 20px auto;
+    width: 90%;
+    height:500px;
+    box-sizing: border-box;
+    position: relative;
+    top:150px;
+    display: block;
+}
+.push label{
+    color: rgb(230, 230, 230);
+    font-size: 25px;
+    margin: 0 0 10px;
+    position: absolute;
+    top:20px;
+    left: 20px;
+}
+.push button{
+    background-color: rgb(0, 110, 255);
+    width: 90px;
+    height: 35px;
+    text-align:center;
+    font-size: 18px;
+    color: azure;
+    border :none ;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+.push label input{
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+.push label textarea{
+    position: relative;
+    top: 50px;
+    resize: none;
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(51, 51, 51);
+    color:aliceblue
+}
 
 
 .tm {

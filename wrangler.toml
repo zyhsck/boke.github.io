@@ -1,0 +1,4 @@
+name = "boke.github.io"
+type = "javascript"
+account_id = "your-account-id"
+workers_dev = true
