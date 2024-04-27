@@ -5,9 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
     <link rel="stylesheet" type="text/css" href="all.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+    fetch('events.json')
+        .then(response => response.json())
+        .then(data => {
+            const eventsContainer = document.getElementById('eventsContainer');
+            data.forEach(event => {
+                const eventDiv = document.createElement('div');
+                eventDiv.classList.add('event');
+
+                const img = document.createElement('img');
+                img.src = event.image; // Set custom image URL here
+
+                const title = document.createElement('h1');
+                title.textContent = event.date + ' ' + event.title;
+
+                const description = document.createElement('p');
+                event.description.forEach(para => {
+                    const paraElement = document.createElement('p');
+                    paraElement.textContent = para;
+                    description.appendChild(paraElement);
+                });
+
+                const button = document.createElement('button');
+                button.textContent = '前往查看';
+
+                eventDiv.appendChild(img);
+                eventDiv.appendChild(title);
+                eventDiv.appendChild(description);
+                eventDiv.appendChild(button);
+
+                eventsContainer.appendChild(eventDiv);
+            });
+        })
+        .catch(error => console.error('Error fetching events:', error));
+});
+
+    </script>
 </head>
 <body>
-    <div class="title" > 
+    <div class="title"> 
         <header>
             <img src="png/logo.png">
             <h1>Blog</h1>
@@ -20,41 +58,12 @@
         </nav>
     </div>
     <!-----------------更新日志------------------->
-
-    <div class="event">  <! P最好不要超过20个,为了适配手机端 !>
-        <img src="png/app/news.png">
-        <h1>2024/4/6更新网站</h1>
-        <p>优化了细节UI排版</p>
-        <p>修复bug</p>
-        <button>前往查看</button>
-    </div>
-
-    <div class="event">  <! P最好不要超过20个,为了适配手机端 !>
-        <img src="png/app/news.png">
-        <h1>2024/4/4更新网站</h1>
-        <p>将clash节点设置为实时更新</p>
-        <p>修复bug</p>
-        <button>前往查看</button>
-    </div>
-
-    <div class="event">  <! P最好不要超过20个,为了适配手机端 !>
-        <img src="png/app/news.png">
-        <h1>2024/2/6更新网站</h1>
-        <p>添加了LOGO</p>
-        <p>优化了UI排版</p>
-        <button>前往查看</button>
-    </div>
-
-    <div class="event">  <! P最好不要超过20个,为了适配手机端 !>
-        <img src="png/vital.png">
-        <h1>2024/2/5建站</h1>
-        <p>建站啦！！</p>
-        <button>前往查看</button>
-    </div>
+    
+    <div id="eventsContainer"></div>
 
     <!-------------------------------------------->
 
-    <footer id="et" style="height: 250px;" >
+    <footer id="et" style="height: 250px;">
     <footer class="tm">
         <p>&copy; 2024 My Blog/Forum.</p>
     </footer>
