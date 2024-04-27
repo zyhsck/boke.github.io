@@ -1,5 +1,16 @@
 [
   {
+    "date": "2024/4/27",
+    "title": "更新网站",
+    "image": "png/app/news.png",
+    "description": [
+      "优化了细节UI排版",
+      "修改了底层的排版框架(由html变为json)",
+      "添加了关于界面的投稿入口",
+      "修复了一些不为人知的bug"
+    ]
+  },
+  {
     "date": "2024/4/6",
     "title": "更新网站",
     "image": "png/app/news.png",
