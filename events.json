@@ -4,6 +4,15 @@
     "title": "更新网站",
     "image": "png/app/news.png",
     "description": [
+      "添加了代码专区",
+      "修复了一些不为人知的bug"
+    ]
+  },
+  {
+    "date": "2024/5/1",
+    "title": "更新网站",
+    "image": "png/app/news.png",
+    "description": [
       "添加了机场推荐和广告位(来点广告吧qwq)",
       "修复了一些不为人知的bug"
     ]

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="all.css">
     <script defer>
         document.addEventListener('DOMContentLoaded', function() {
-    fetch('events.json')
+    fetch('codes.json')
         .then(response => response.json())
         .then(data => {
             const eventsContainer = document.getElementById('eventsContainer');
@@ -30,18 +30,24 @@
 
                 const button = document.createElement('button');
                 button.textContent = '前往查看';
+                button.addEventListener('click', function() {
+                    window.location.href = event.url;
+                });
+
+                const buttonLink = document.createElement('a');
+                buttonLink.href = event.url;
+                buttonLink.appendChild(button);
 
                 eventDiv.appendChild(img);
                 eventDiv.appendChild(title);
                 eventDiv.appendChild(description);
-                eventDiv.appendChild(button);
+                eventDiv.appendChild(buttonLink);
 
                 eventsContainer.appendChild(eventDiv);
             });
         })
         .catch(error => console.error('Error fetching events:', error));
 });
-
     </script>
 </head>
 <body>
