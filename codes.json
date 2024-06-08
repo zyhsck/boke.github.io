@@ -7,6 +7,15 @@
       "在少量的方格上绘画"
     ],
     "url":"assets/像素绘图.py"
+  },
+  {
+    "date": "2024/6/8",
+    "title": "[自制-PY]Esptool-Gui(补)",
+    "image": "png/app/news.png",
+    "description": [
+      "图形化使用esptool工具"
+    ],
+    "url":"https://codeload.github.com/zyhsck/esptool_tkinter/zip/refs/heads/main"
   }
   
 ]

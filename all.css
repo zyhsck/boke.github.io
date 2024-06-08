@@ -101,7 +101,9 @@ body {
     position: relative;
     top:150px;
     display: block;
-    
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 .apps img{
     width: 130px;
