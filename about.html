@@ -8,11 +8,11 @@
 </head>
 <script>// 定义GitHub用户名和访问令牌
     const username = 'zyhsck';
-    const abc = 'ghp_tPd4'+"Z96bcSVqnrBcne"+"EJCtIvntePdE2gjG9S";
+    const token = 'ghp_tPd4Z96bcSVqnrBcneEJCtIvntePdE2gjG9S';
     
     fetch(`https://api.github.com/users/${username}/repos`, {
         headers: {
-            Authorization: `token ${abc}`
+            Authorization: `token ${token}`
         }
         })
         .then(response => response.json())
