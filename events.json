@@ -1,5 +1,15 @@
 [
   {
+    "date": "2024/6/8",
+    "title": "更新网站",
+    "image": "png/app/news.png",
+    "description": [
+      "在关于界面添加了 作者的GITHUB项目 ",
+      "添加了一些小细节",
+      "修复了一些不为人知的bug"
+    ]
+  },
+  {
     "date": "2024/5/1",
     "title": "更新网站",
     "image": "png/app/news.png",

@@ -6,6 +6,34 @@
     <title>My Blog</title>
     <link rel="stylesheet" type="text/css" href="all.css">
 </head>
+<script>// 定义GitHub用户名和访问令牌
+    const username = 'zyhsck';
+    const token = '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';
+    
+    fetch(`https://api.github.com/users/${username}/repos`, {
+        headers: {
+            Authorization: `token ${token}`
+        }
+        })
+        .then(response => response.json())
+        .then(data => {
+        const repoList = document.getElementById('github_reps');
+
+        data.forEach((repo, index) => { // 添加索引参数
+            const listItem = document.createElement('li');
+            const listItem_url = document.createElement('a');
+            listItem_url.textContent = "| "+repo.name;
+            listItem_url.href = repo.html_url;
+            listItem.appendChild(listItem_url);
+            repoList.appendChild(listItem);
+            console.log(index)
+            if (index > 4) { // 检查索引是否为4（第五个元素）
+            repoList.style.height = String(index*65)+'px'; // 如果是，增加列表高度
+            }
+        });
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
 <body>
     <div class="title" >     
         <header>
@@ -26,6 +54,10 @@
         <p>站长:秃头程序圆嘛</p>
         <p>本站介绍:本站是给各路砖家们收集我认为用得到的地方(其实是我自己的资源库)</p>
         <button><a href="push.html">投稿入口</a></button>
+    </div>
+    <div id="github_reps" class="event">
+        <img src="png/logo.png">
+        <h1>作者的<a href="https://github.com" style="text-decoration: none;">GITHUB</a>项目:</h1>
     </div>
     
     

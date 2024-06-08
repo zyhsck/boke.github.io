@@ -69,6 +69,7 @@ body {
     margin: 0;
     width: 85%;
 }
+
 .event img {
     height: 100px;
     width: 100px;
@@ -76,6 +77,7 @@ body {
     top: 20px;
     right: 20px;
 }
+
 .event button {
     background-color: rgb(0, 119, 255);
     width: 80px;
@@ -87,11 +89,26 @@ body {
     position: absolute;
     bottom: 10px;
     right: 30px;
-}.event button a {
+}
+
+.event button a {
 
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+
+.event li{
+    list-style: none; 
+}
+
+.event li a{
+    font-size: 18px;
+    color: aliceblue;
+    margin: 0;
+    width: 85%;
+    text-decoration: none;
+}
+
 .apps{
     background-color: rgba(26, 26, 26, 0.781);
     margin: 20px auto;
@@ -128,6 +145,7 @@ body {
     bottom: 80px;
     left: 180px;
 }
+
 .apps a {
     font-size: 18px;
     color: rgb(81, 171, 250);
@@ -150,6 +168,7 @@ body {
     bottom: 10px;
     right: 30px;
 }
+
 .apps button a {
     position: static;
     color: antiquewhite;
@@ -169,6 +188,7 @@ body {
     top:150px;
     display: block;
 }
+
 .push label{
     color: rgb(230, 230, 230);
     font-size: 25px;
@@ -177,6 +197,7 @@ body {
     top:20px;
     left: 20px;
 }
+
 .push button{
     background-color: rgb(0, 110, 255);
     width: 90px;
@@ -193,6 +214,7 @@ body {
 .push label input{
     background-color: rgb(255, 255, 255);
 }
+
 .push label textarea{
     position: relative;
     top: 50px;
