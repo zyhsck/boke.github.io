@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 设置字符集和视口 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网页标题 -->
     <title>My Blog</title>
+    <!-- 引入主 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="all.css">
+    <!-- 用于获取和显示事件的 JavaScript -->
     <script defer>
         document.addEventListener('DOMContentLoaded', function() {
-    fetch('events.json')
-        .then(response => response.json())
-        .then(data => {
-            const eventsContainer = document.getElementById('eventsContainer');
-            data.forEach(event => {
-                const eventDiv = document.createElement('div');
-                eventDiv.classList.add('event');
+            // 从 JSON 文件中获取事件数据
+            fetch('events.json')
+                .then(response => response.json())
+                .then(data => {
+                    const eventsContainer = document.getElementById('eventsContainer');
+                    // 遍历 JSON 数据中的每个事件
+                    data.forEach(event => {
+                        // 创建每个事件的 div 元素
+                        const eventDiv = document.createElement('div');
+                        eventDiv.classList.add('event');
 
-                const img = document.createElement('img');
-                img.src = event.image; // Set custom image URL here
+                        // 创建图片元素
+                        const img = document.createElement('img');
+                        img.src = event.image; // 设置图片 URL
 
-                const title = document.createElement('h1');
-                title.textContent = event.date + ' ' + event.title;
+                        // 创建标题元素
+                        const title = document.createElement('h1');
+                        title.textContent = event.date + ' ' + event.title;
 
-                const description = document.createElement('p');
-                event.description.forEach(para => {
-                    const paraElement = document.createElement('p');
-                    paraElement.textContent = para;
-                    description.appendChild(paraElement);
-                });
+                        // 创建描述元素
+                        const description = document.createElement('p');
+                        // 遍历描述中的每个段落
+                        event.description.forEach(para => {
+                            const paraElement = document.createElement('p');
+                            paraElement.textContent = para;
+                            description.appendChild(paraElement);
+                        });
 
-                const a = document.createElement('a');
-                if (event.hasOwnProperty("url")) {   //判断有无url
-                    const button = document.createElement('button');
-                    
-                    a.href=event.url;
-                    a.textContent = '前往查看';
+                        // 创建链接元素
+                        const a = document.createElement('a');
+                        let button_text = "前往查看"; // 默认按钮文本
+                        // 检查是否存在自定义按钮文本和 URL
+                        if (event.hasOwnProperty("button_text") || event.hasOwnProperty("url")) {
+                            if (event.hasOwnProperty("button_text")) {
+                                button_text = event.button_text;
+                            }
+                            // 设置链接 URL
+                            if (event.hasOwnProperty("url")) {
+                                a.href = event.url;
+                            }
+                            a.textContent = button_text;
 
-                    button.appendChild(a)
-                    eventDiv.appendChild(button);
-                } else {
-                    a.textContent = '已是全文';
-                }
+                            // 创建按钮元素并添加链接
+                            const button = document.createElement('button');
+                            button.appendChild(a);
+                            eventDiv.appendChild(button);
+                        }
 
-                console.log(event.url)
-                
-                eventDiv.appendChild(img);
-                eventDiv.appendChild(title);
-                eventDiv.appendChild(description);
-                
+                        // 将元素添加到事件 div 中
+                        eventDiv.appendChild(img);
+                        eventDiv.appendChild(title);
+                        eventDiv.appendChild(description);
 
-                eventsContainer.appendChild(eventDiv);
-            });
-        })
-        .catch(error => console.error('Error fetching events:', error));
-});
-
+                        // 将事件 div 添加到事件容器中
+                        eventsContainer.appendChild(eventDiv);
+                    });
+                })
+                .catch(error => console.error('Error fetching events:', error));
+        });
     </script>
 </head>
 <body>
+    <!-- 头部部分 -->
     <div class="title"> 
         <header>
             <img src="png/logo.png">
             <h1>Blog</h1>
         </header>
+        <!-- 导航链接 -->
         <nav>
             <a href="index.html">主页</a>
             <a href="assets.html">资源</a>
@@ -69,16 +87,15 @@
             <a href="about.html">关于</a>
         </nav>
     </div>
-    <!-----------------更新日志------------------->
-    
+
+    <!-- 事件容器 -->
     <div id="eventsContainer"></div>
 
-    <!-------------------------------------------->
-
-    <footer id="et" style="height: 250px;">
-    <footer class="tm">
-        <p>&copy; 2024 YH's Blog/Forum.</p>
-        <p>Email Forwarding-&copy;<a href="https://formspree.io/" style="text-decoration: none;color: rgb(255, 109, 109);font-size: 20px;">Formspree</a> </p>
-    </footer>
+    <!-- 底部部分 -->
+    <footer id="et" style="height: 250px;" >
+        <footer class="tm">
+            <p>&copy; 2024 YH's Blog/Forum.</p>
+            <p>Email Forwarding-&copy;<a href="https://formspree.io/" style="text-decoration: none;color: rgb(255, 109, 109);font-size: 20px;">Formspree</a> </p>
+        </footer>
 </body>
 </html>

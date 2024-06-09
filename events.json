@@ -1,5 +1,16 @@
 [
   {
+    "date": "2024/6/9",
+    "title": "更新网站",
+    "image": "png/app/news.png",
+    "description": [
+      "添加了主页内容的跳转按钮(就是标题右下角的那个按钮qwq)",
+      "优化底层架构",
+      "修复了一些不为人知的bug"
+    ],
+    "button_text":"就是我啦"
+  },
+  {
     "date": "2024/6/8",
     "title": "更新网站",
     "image": "png/app/news.png",
