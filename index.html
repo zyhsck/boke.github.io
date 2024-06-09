@@ -28,13 +28,25 @@
                     description.appendChild(paraElement);
                 });
 
-                const button = document.createElement('button');
-                button.textContent = '前往查看';
+                const a = document.createElement('a');
+                if (event.hasOwnProperty("url")) {   //判断有无url
+                    const button = document.createElement('button');
+                    
+                    a.href=event.url;
+                    a.textContent = '前往查看';
 
+                    button.appendChild(a)
+                    eventDiv.appendChild(button);
+                } else {
+                    a.textContent = '已是全文';
+                }
+
+                console.log(event.url)
+                
                 eventDiv.appendChild(img);
                 eventDiv.appendChild(title);
                 eventDiv.appendChild(description);
-                eventDiv.appendChild(button);
+                
 
                 eventsContainer.appendChild(eventDiv);
             });
